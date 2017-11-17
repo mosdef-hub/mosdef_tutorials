@@ -25,9 +25,10 @@ def visualize(compound, show_bonds=True, show_ports=True, box=None,
     volume = np.linalg.norm(box.lengths)
 
     colors = {'C': 'cyan', 'H': 'white', 'O': 'red', 'Si': 'yellow',
-              'Unk': 'gray'}
+              'Unk': 'gray', 'OS': 'red', 'F': 'magenta'}
     size = {'C': 1250/volume, 'H': 400/volume, 'O': 1300/volume,
-            'Si': 2000/volume, 'Unk': 1250/volume}
+            'Si': 2000/volume, 'Unk': 1250/volume, 'OS': 1300/volume,
+            'F': 1000/volume}
 
     n_particles = compound._n_particles(include_ports=show_ports)
     for i, particle in enumerate(compound.particles(include_ports=show_ports)):
