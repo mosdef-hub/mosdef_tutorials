@@ -1,0 +1,31 @@
+constraints         = none
+integrator          = md
+nsteps              = 1000000
+dt                  = 0.001
+
+nstxout             = 10000
+nstvout             = 0
+nstenergy           = 1000
+nstlog              = 1000
+
+cutoff-scheme       = Verlet
+ns_type             = grid
+nstlist             = 10
+rcoulomb            = 1.1
+rvdw                = 1.1
+
+coulombtype         = PME
+fourierspacing      = 0.16
+
+gen_vel             = no
+
+tcoupl              = berendsen
+tc-grps             = System
+tau_t               = 1
+ref_t               = 300
+
+pcoupl              = berendsen
+pcoupltype          = isotropic
+tau_p               = 1
+ref_p               = 1
+compressibility     = 4.5e-5
