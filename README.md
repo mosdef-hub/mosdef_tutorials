@@ -14,7 +14,7 @@ This repository features a series of tutorials and examples to help new users ge
 familiarized with the MoSDeF toolkit. These tutorials/examples are organzied as
 follows:
 
-### [mBuild](https://github.com/summeraz/mbuild-tutorials)
+### [mBuild](https://github.com/summeraz/mosdef_tutorials/tree/master/mbuild-tutorials)
 
 * mBuild 00: Getting Started
 * mBuild 01: Basic Functionality
@@ -27,7 +27,7 @@ follows:
 * mBuild 08: Building Polymers
 * mBuild 09: Surface Functionalization
 
-### [Foyer](https://github.com/summeraz/foyer-tutorials)
+### [Foyer](https://github.com/summeraz/mosdef_tutorials/tree/master/foyer-tutorials)
 
 * Foyer 00: Getting Started
 * Foyer 01: SMARTS and Overrides
