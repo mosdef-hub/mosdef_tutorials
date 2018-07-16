@@ -1,0 +1,30 @@
+name: mosdef-binder
+
+channels:
+  - conda-forge
+  - defaults
+  - mosdef
+  - omnia
+  - glotzer
+  - bioconda
+
+dependencies:
+  - python=3.5
+  - numpy
+  - scipy
+  - packmol=1.0.0
+  - nglview>=0.6.2.3
+  - oset
+  - parmed
+  - mdtraj
+  - gsd
+  - openbabel
+  - jupyter
+  - nbformat
+  - ipykernel
+  - openmm
+  - networkx
+  - six
+  - plyplus
+  - requests
+  - lxml
