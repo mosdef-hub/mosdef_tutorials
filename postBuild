@@ -1,6 +1,5 @@
 #!/bin/bash
 
-cd ..
 mkdir src
 cd src
 
@@ -12,4 +11,4 @@ cd ..
 git clone https://github.com/mosdef-hub/foyer.git
 cd foyer
 pip install .
-cd ../..
+cd ..
