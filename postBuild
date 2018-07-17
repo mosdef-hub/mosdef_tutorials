@@ -1,0 +1,15 @@
+#!/bin/bash
+
+cd ..
+mkdir src
+cd src
+
+git clone https://github.com/mosdef-hub/mbuild.git
+cd mbuild
+pip install .
+cd ..
+
+git clone https://github.com/mosdef-hub/foyer.git
+cd foyer
+pip install .
+cd ../..
