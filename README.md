@@ -1,7 +1,9 @@
 # MoSDeF: A Molecular Simulation and Design Framework
-MoSDeF consists of a collection of Python packages aimed at facilitating the
-creation, atom-typing, and simulation of molecular models - with a particular
-focus on facilitating screening over large structural parameter spaces.
+MoSDeF consists of a collection of Python packages aimed at simplifying the
+creation, atom-typing, and simulation of complex molecular models - with a particular
+focus on the use of programmatic routines that allow for screening over large
+structural parameter spaces and the encapsulation of these routines which
+facilitates reproducibility.
 
 MoSDeF is founded around two core Python packages:
 
