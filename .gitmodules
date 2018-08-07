@@ -1,0 +1,3 @@
+[submodule "mbuild_tutorials"]
+	path = mbuild_tutorials
+	url = https://github.com/mosdef-hub/mbuild_tutorials.git
