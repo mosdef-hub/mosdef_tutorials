@@ -1,3 +1,6 @@
 [submodule "mbuild_tutorials"]
 	path = mbuild_tutorials
 	url = https://github.com/mosdef-hub/mbuild_tutorials.git
+[submodule "foyer_tutorials"]
+	path = foyer_tutorials
+	url = https://github.com/mosdef-hub/foyer_tutorials.git
