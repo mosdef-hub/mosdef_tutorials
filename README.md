@@ -12,11 +12,11 @@ molecule builder
 * [Foyer](https://github.com/mosdef-hub/foyer): A package for atom-typing as well as applying and disseminating forcefields
 
 ## Tutorials
-This repository features a series of tutorials and examples to help new users get
+This repository features a collection of tutorials and examples to help new users get
 familiarized with the MoSDeF toolkit. These tutorials/examples are organzied as
 follows:
 
-### [mBuild](https://github.com/summeraz/mosdef_tutorials/tree/master/mbuild-tutorials)
+### [mBuild](https://github.com/mosdef-hub/mosdef_tutorials/mbuild_tutorials)
 
 * mBuild 00: Getting Started
 * mBuild 01: Basic Functionality
@@ -29,22 +29,33 @@ follows:
 * mBuild 08: Building Polymers
 * mBuild 09: Surface Functionalization
 
-### [Foyer](https://github.com/summeraz/mosdef_tutorials/tree/master/foyer-tutorials)
+The mBuild tutorials can also be accessed through the [mBuild tutorials repository](https://github.com/mosdef-hub/mbuild_tutorials).
+
+### [Foyer](https://github.com/mosdef-hub/mosdef_tutorials/foyer-tutorials)
 
 * Foyer 00: Getting Started
 * Foyer 01: SMARTS and Overrides
 * Foyer 02: SMARTS for Non-Atomistic Systems
 * Foyer 03: Creating Force Field Files
 
+The Foyer tutorials can also be accessed through the [Foyer tutorials repository](https://github.com/mosdef-hub/foyer_tutorials).
+
 A series of full examples demonstrating how systems constructed with mBuild
 and Foyer can be used for performing simulations are currently under
 construction.
 
-You can run these tutorials interactively in-browser through our Binder
-link:
+You can access this repository and run these tutorials interactively in-browser
+through our Binder link:
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mosdef-hub/mosdef_tutorials/master)
 
 If you would like a more general introduction to these tools, we have also
 included an "Overview" notebook that can be accessed through the following
 Binder link:
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mosdef-hub/mosdef_tutorials/master?filepath=overview.ipynb)
+
+Additionally, if you would like to access only the mBuild or only the Foyer tutorials,
+these can be accessed through the following Binder links:
+
+__mBuild__ [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mosdef-hub/mbuild_tutorials/master)
+
+__Foyer__ [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/mosdef-hub/foyer_tutorials/master)
