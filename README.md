@@ -19,7 +19,7 @@ To access the MoSDeF tutorials clone this repository using:
 git clone --recurse-submodules https://github.com/mosdef-hub/mosdef_tutorials.git
 ```
 
-Note the addition of the `--recurse-submodules` flag to the standard `git clone command.`
+Note the addition of the `--recurse-submodules` flag to the standard `git clone` command.
 The mBuild and Foyer tutorials are included here as submodules and this flag
 is necessary to download them.
 
