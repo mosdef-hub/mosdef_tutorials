@@ -11,6 +11,18 @@ MoSDeF is founded around two core Python packages:
 molecule builder
 * [Foyer](https://github.com/mosdef-hub/foyer): A package for atom-typing as well as applying and disseminating forcefields
 
+## Installation
+
+To access the MoSDeF tutorials clone this repository using:
+
+```
+git clone --recurse-submodules https://github.com/mosdef-hub/mosdef_tutorials.git
+```
+
+Note the addition of the `--recurse-submodules` flag to the standard `git clone command.`
+The mBuild and Foyer tutorials are included here as submodules and this flag
+is necessary to download them.
+
 ## Tutorials
 This repository features a collection of tutorials and examples to help new users get
 familiarized with the MoSDeF toolkit. These tutorials/examples are organzied as
