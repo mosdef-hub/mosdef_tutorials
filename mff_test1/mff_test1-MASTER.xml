@@ -1,13 +1,13 @@
 <ForceField>
   <AtomTypes>
     <Type name="mff_0" class="CT" element="C" mass="12.01100"
-          def="" desc="methane CH4" />
+          def="[C;X4](H)(H)(H)H" desc="methane CH4" />
     <Type name="mff_1" class="CT" element="C" mass="12.01100"
-          def="" desc="alkane CH3" />
+          def="[C;X4](C)(H)(H)H" desc="alkane CH3" />
     <Type name="mff_2" class="CT" element="C" mass="12.01100"
-          def="" desc="alkane CH2" />
+          def="[C;X4](C)(C)(H)H" desc="alkane CH2" />
     <Type name="mff_3" class="HC" element="H" mass="1.00800"
-          def="" desc="alkane H" />
+          def="H[C;X4]" desc="alkane H" />
   </AtomTypes>
   <HarmonicBondForce>
       <Bond class1="CT" class2="CT" length="0.1529" k="224262.4"/>
