@@ -1,15 +1,13 @@
 <ForceField>
   <AtomTypes>
     <Type name="mff_0" class="CT" element="C" mass="12.01100"
-          def="[C;X4](H)(H)(H)H" desc="methane CH4" overrides=""/>
+          def="[C;X4](H)(H)(H)H" desc="methane CH4" />
     <Type name="mff_1" class="CT" element="C" mass="12.01100"
-          def="[C;X4](C)(H)(H)H" desc="alkane CH3" overrides=""/>
+          def="[C;X4](C)(H)(H)H" desc="alkane CH3" />
     <Type name="mff_2" class="CT" element="C" mass="12.01100"
-          def="[C;X4](C)(C)(H)H" desc="alkane CH2" overrides=""/>
+          def="[C;X4](C)(C)(H)H" desc="alkane CH2" />
     <Type name="mff_3" class="HC" element="H" mass="1.00800"
           def="H[C;X4]" desc="alkane H" />
-    <Type name="mff_4" class="CT" element="C" mass="12.01100"
-          def="" desc="alkane CH2"/>
   </AtomTypes>
   <HarmonicBondForce>
       <Bond class1="CT" class2="CT" length="0.1529" k="224262.4"/>
@@ -33,6 +31,5 @@
     <Atom type="mff_1" charge="-0.12" sigma="0.35" epsilon="0.276144"/>
     <Atom type="mff_2" charge="0.06" sigma="0.25" epsilon="0.12552"/>
     <Atom type="mff_3" charge="-0.683" sigma="0.312" epsilon="0.71128"/>
-    <Atom type="mff_4" charge="-0.18" sigma="0.35" epsilon="0.276144"/>
   </NonbondedForce>
 </ForceField>
