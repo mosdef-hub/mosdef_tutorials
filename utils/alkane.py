@@ -20,7 +20,7 @@ class Alkane(mb.Compound):
         super(Alkane, self).__init__()
 
         # Create a polymer of CH2 units
-        chain = mb.Polymer(CH2(), n=chain_length, port_labels=('up', 'down'))
+        chain = mb.recipes.Polymer(CH2(), n=chain_length, port_labels=('up', 'down'))
         self.add(chain, 'chain')
 
         # Cap one end of the polymer with a hydrogen
