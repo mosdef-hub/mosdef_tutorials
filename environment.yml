@@ -9,16 +9,19 @@ channels:
   - bioconda
 
 dependencies:
-  - python=3.5
+  - python=3.7
   - numpy
   - scipy
-  - packmol=1.0.0
-  - nglview>=0.6.2.3
+  - packmol>=1!18.013
+  - nglview
+  - py3dmol
   - oset
   - parmed
   - mdtraj
+  - mbuild
+  - foyer
   - gsd
-  - openbabel
+  - openbabel>=3.0.0
   - jupyter
   - nbformat
   - ipykernel
