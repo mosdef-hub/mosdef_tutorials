@@ -1,0 +1,64 @@
+<!--
+ OPLS forcefield for perfluoroalkanes
+ 
+ Source: Watkins and Jorgensen, J. Phys. Chem. A, 105, 2001 pp 4118-4125 DOI:10.1021/jp004071w
+ Forcefield file initially created on 04 August 2017 by C.R. Iacovella
+ 
+ While all parameters are listed in Watkins and Jorgensen, bond and angle parameters have various original sources, as annotated in the manuscript:
+ - CT-F Bonds come from reference doi="10.1002/jcc.540130806"
+ - F-CT-F angles are from reference doi="10.1021/ja00124a002"
+ - CT-CT-F angles are the same as CT-CT-OH and CT-CT-OS from reference: doi="10.1021/ja00124a002"
+ - Bonds and angles for the CT-CT and CT-CT-CT  are the same as for alkanes from reference, doi="10.1021/ja9621760"
+ 
+ Additional Notes
+ - These are the "general" parameters for perfluoroalkanes; specific dihedrals exist for 4 and 5-mers
+ - The backbone dihedral specifically references opls_962 (i.e. C-CF2-C) rather than only using the "CT" class;
+   if only the "CT" class were used, this would create a conflict with alkane systems if the parameters were merged.
+ - The original parameters are defined as kcal/mol, this file uses kJ/mol; a conversion factor of 4.184 was used,
+    consistent with openMM. 
+ - PI is defined as 3.141592653589 for conversion to radians, consistent with openMM.
+ - Atom type names, e.g., opls_961, correspond to those defined in the OPLS forcefield itp file distributed with GROMACS.
+ - Conversion from OPLS-style dihedrals to RB follow the formulas detailed in the GROMACS manual. Specifically,
+   OPLS form: 
+     0.5*(F1*(1+cos(phi))+ F2*(1-cos(2phi))+ F3*(1+cos(3phi))+F4*(1-cos(4phi)))
+   RB mapping:
+     c0 = F2+0.5*(F1+F3)
+     c1 = 0.5*(-F1+3F3)
+     c2 = -F2 + 4F4
+     c3 = -2F3
+     c4 = -4F4
+     c5 = 0
+-->
+
+ <ForceField>
+ <AtomTypes>
+     <Type name="opls_961" class="CT" element="C" mass="12.01100"  def="[C;X4](F)(F)(F)(C)" desc="perfluoroalkane CF3" doi="10.1021/jp004071w"/>
+     <Type name="opls_962" class="CT" element="C" mass="12.01100"  def="[C;X4](F)(F)(C)(C)" desc="perfluoroalkane CF2" doi="10.1021/jp004071w"/>
+     <Type name="opls_963" class="CT" element="C" mass="12.011"    def="[C;X4](F)(C)(C)(C)" desc="perfluoroalkane CF"  doi="10.1021/jp004071w"/>
+     <Type name="opls_964" class="CT" element="C" mass="12.011"    def="[C;X4](F)(F)(F)(F)" desc="perfluoroalkane CF4" doi="10.1021/jp004071w"/>
+     <Type name="opls_965" class="F"  element="F" mass="18.9984"   def="FC"                 desc="perfluoroalkane F"   doi="10.1021/jp004071w"/>
+ </AtomTypes>
+ <HarmonicBondForce>
+     <Bond class1="CT" class2="CT" length="0.1529" k="224262.4"/> <!--doi="10.1021/ja9621760"-->
+     <Bond class1="CT" class2="F" length="0.1332" k="307105.6"/> <!--doi="10.1002/jcc.540130806-->
+ </HarmonicBondForce>
+ <HarmonicAngleForce>
+     <Angle class1="CT" class2="CT" class3="CT" angle="1.966986067"   k="488.273"/> <!--doi="10.1021/ja9621760"-->
+     <Angle class1="CT" class2="CT" class3="F"  angle="1.91113553093" k="418.4"/>   <!--doi="10.1021/ja00124a002"-->
+     <Angle class1="F"  class2="CT" class3="F"  angle="1.904154214"   k="644.336"/> <!--doi="10.1021/ja00124a002"-->
+ </HarmonicAngleForce>
+ <RBTorsionForce>
+     <Proper class1="CT" type2="opls_962" type3="opls_962" class4="CT" c0="14.91596" c1="-22.564312" c2="-39.41328" c3="11.614784" c4="35.446848" c5="0.0"/> <!--doi="10.1021/jp004071w"-->
+     <Proper type1="opls_961" type2="opls_963" type3="opls_962" type4="opls_961" c0="15.85736" c1="-19.940944" c2="-27.606032" c3="3.64008" c4="28.049536" c5="0.0"/> <!--doi="10.1021/jp004071w"-->
+     <Proper class1="F" class2="CT" class3="CT" class4="F" c0="-4.707" c1="6.799" c2="0.0" c3="-2.092" c4="0.0" c5="0.0"/> <!--doi="10.1021/jp004071w"-->
+     <Proper class1="CT" class2="CT" class3="CT" class4="F" c0="1.4644" c1="1.8828" c2="0.0" c3="-3.3472" c4="0.0" c5="0.0"/> <!--doi="10.1021/jp004071w"-->
+ </RBTorsionForce>
+ <NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
+     <Atom type="opls_961" charge="0.36"  sigma="0.35"  epsilon="0.276144"/>
+     <Atom type="opls_962" charge="0.24"  sigma="0.35"  epsilon="0.276144"/>
+     <Atom type="opls_963" charge="0.12"  sigma="0.35"  epsilon="0.276144"/>
+     <Atom type="opls_964" charge="0.48"  sigma="0.35"  epsilon="0.405848"/>
+     <Atom type="opls_965" charge="-0.12" sigma="0.295" epsilon="0.221752"/>
+ </NonbondedForce>
+</ForceField>
+

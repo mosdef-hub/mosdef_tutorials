@@ -1,5 +1,6 @@
 *.py[cod]
 *.ipynb_checkpoints
+__pycache__
 
 # C extensions
 *.so

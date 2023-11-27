@@ -1,0 +1,30 @@
+<ForceField>
+    <AtomTypes>
+        <Type name="cg_A_AA" def="[_A;X2](_A)(_A)"
+              class="CT" element="_A" mass="1.0"
+              desc="generic CG central bead, with two _A neighbors"/>
+        <Type name="cg_A_AB" def="[_A;X2](_A)(_B)"
+              class="CT" element="_A" mass="1.0"
+              desc="generic CG central bead with dissimilar neighbors"/>
+        <Type name="cg_A_BB" def="[_A;X2](_B)(_B)"
+              class="CT" element="_A" mass="1.0"
+              desc="generic CG central bead with two _B neighbors"/>
+        <Type name="cg_B" def="[_B;X1]"
+              class="CT" element="_B" mass="1.0"
+              desc="generic CG terminal bead"/>
+    </AtomTypes>
+    <HarmonicBondForce>
+        <Bond class1="CT" class2="CT" length="0.1" k="20000"/>
+    </HarmonicBondForce>
+    <HarmonicAngleForce>
+        <Angle class1="CT" class2="CT" class3="CT" angle="3.0" k="500"/>
+    </HarmonicAngleForce>
+    <RBTorsionForce>
+    </RBTorsionForce>
+    <NonbondedForce coulomb14scale="0.5" lj14scale="0.5">
+        <Atom type="cg_A_AA" charge="0" sigma="0.1" epsilon="1.0"/>
+        <Atom type="cg_A_AB" charge="0" sigma="0.1" epsilon="1.25"/>
+        <Atom type="cg_A_BB" charge="0" sigma="0.1" epsilon="1.5"/>
+        <Atom type="cg_B"   charge="0" sigma="0.1" epsilon="2.0"/>
+    </NonbondedForce>
+</ForceField>

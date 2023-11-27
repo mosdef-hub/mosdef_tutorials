@@ -2,14 +2,9 @@ name: mosdef-binder
 
 channels:
   - conda-forge
-  - defaults
-  - mosdef
-  - omnia
-  - glotzer
-  - bioconda
 
 dependencies:
-  - python=3.7
+  - python=3.10
   - numpy
   - scipy
   - packmol>=1!18.013
@@ -20,6 +15,7 @@ dependencies:
   - mdtraj
   - mbuild
   - foyer
+  - gmso
   - gsd
   - openbabel>=3.0.0
   - jupyter
