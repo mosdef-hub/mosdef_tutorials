@@ -1,0 +1,40 @@
+calcraven written by top at 2023-12-19 15:52:46.515540 using the GMSO LAMMPS Writer
+
+3 atoms
+2 bonds
+0 angles
+0 dihedrals
+0 impropers
+
+2 atom types
+1 bond types
+
+0.000000 3.013000 xlo xhi
+0.000000 3.013000 ylo yhi
+0.000000 3.013000 zlo zhi
+0.000000 0.000000 0.000000 xy xz yz
+
+Masses
+#	mass (amu)
+1	16.000	# opls_111
+2	1.011	# opls_112
+
+Pair Coeffs # 4*epsilon*(-sigma**6/r**6 + sigma**12/r**12)
+#	epsilon (kcal/mol)	sigma (Å)
+1	0.15210		3.15061		# opls_111
+2	0.00000		10.00000		# opls_112
+
+Bond Coeffs #HarmonicBondPotential
+#	k (kcal/(mol*Å**2))	r_eq (Å)
+1	600.401530	0.957200		# opls_111	opls_112
+
+Atoms #full
+
+1	1	1	-0.83400	0.610000	1.000000	1.000000
+2	1	2	0.417000	0.170000	0.900000	1.770000
+3	1	2	0.417000	0.110000	1.540000	0.400000
+
+Bonds
+
+1     	1     	1     	2     
+2     	1     	1     	3     
