@@ -1,0 +1,168 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ForceField name="Topology_ForceField" version="1.0.0">
+  <FFMetaData electrostatics14Scale="0.5" nonBonded14Scale="0.5" combiningRule="geometric">
+    <Units energy="kJ" distance="nm" mass="amu" charge="coulomb"/>
+  </FFMetaData>
+  <AtomTypes expression="4*epsilon*(-sigma**6/r**6 + sigma**12/r**12)">
+    <ParametersUnitDef parameter="epsilon" unit="kJ/mol"/>
+    <ParametersUnitDef parameter="sigma" unit="nm"/>
+    <AtomType name="opls_135" mass="12.011" charge="-2.88391791744e-20" atomclass="CT" doi="10.1021/ja9621760" definition="[C;X4](C)(H)(H)H" description="alkane CH3">
+      <Parameters>
+        <Parameter name="epsilon" value="0.276144"/>
+        <Parameter name="sigma" value="0.35"/>
+      </Parameters>
+    </AtomType>
+    <AtomType name="opls_157" mass="12.011" charge="2.32315610016e-20" atomclass="CT" doi="10.1021/ja9621760" overrides="opls_159,opls_136,opls_158" definition="[C;X4]([H])([H])([*])[O;%opls_154]" description="all-atom C: CH3 and CH2, alcohols">
+      <Parameters>
+        <Parameter name="epsilon" value="0.276144"/>
+        <Parameter name="sigma" value="0.35"/>
+      </Parameters>
+    </AtomType>
+    <AtomType name="opls_154" mass="15.9994" charge="-1.0942866320064002e-19" atomclass="OH" doi="10.1021/ja9621760" definition="[O;X2](H)([!H])" description="all-atom O: mono alcohols">
+      <Parameters>
+        <Parameter name="epsilon" value="0.71128"/>
+        <Parameter name="sigma" value="0.312"/>
+      </Parameters>
+    </AtomType>
+    <AtomType name="opls_140" mass="1.008" charge="9.613059724800001e-21" atomclass="HC" doi="10.1021/ja9621760" definition="H[C;X4]" description="alkane H">
+      <Parameters>
+        <Parameter name="epsilon" value="0.12552"/>
+        <Parameter name="sigma" value="0.25"/>
+      </Parameters>
+    </AtomType>
+    <AtomType name="opls_155" mass="1.008" charge="6.697098274944e-20" atomclass="HO" doi="10.1021/ja9621760" definition="H[O;%opls_154]" description="all-atom H(O): mono alcohols, OP(=O)2">
+      <Parameters>
+        <Parameter name="epsilon" value="0.0"/>
+        <Parameter name="sigma" value="1.0"/>
+      </Parameters>
+    </AtomType>
+  </AtomTypes>
+  <BondTypes expression="0.5*k*(r - r_eq)**2">
+    <ParametersUnitDef parameter="k" unit="kJ/(mol*nm**2)"/>
+    <ParametersUnitDef parameter="r_eq" unit="nm"/>
+    <BondType name="HarmonicBondPotential" type1="opls_157" type2="opls_135">
+      <Parameters>
+        <Parameter name="k" value="224262.4"/>
+        <Parameter name="r_eq" value="0.1529"/>
+      </Parameters>
+    </BondType>
+    <BondType name="HarmonicBondPotential" type1="opls_135" type2="opls_140">
+      <Parameters>
+        <Parameter name="k" value="284512.0"/>
+        <Parameter name="r_eq" value="0.109"/>
+      </Parameters>
+    </BondType>
+    <BondType name="HarmonicBondPotential" type1="opls_157" type2="opls_154">
+      <Parameters>
+        <Parameter name="k" value="267776.0"/>
+        <Parameter name="r_eq" value="0.141"/>
+      </Parameters>
+    </BondType>
+    <BondType name="HarmonicBondPotential" type1="opls_157" type2="opls_140">
+      <Parameters>
+        <Parameter name="k" value="284512.0"/>
+        <Parameter name="r_eq" value="0.109"/>
+      </Parameters>
+    </BondType>
+    <BondType name="HarmonicBondPotential" type1="opls_155" type2="opls_154">
+      <Parameters>
+        <Parameter name="k" value="462750.4"/>
+        <Parameter name="r_eq" value="0.0945"/>
+      </Parameters>
+    </BondType>
+  </BondTypes>
+  <AngleTypes expression="0.5*k*(theta - theta_eq)**2">
+    <ParametersUnitDef parameter="k" unit="kJ/(mol*rad**2)"/>
+    <ParametersUnitDef parameter="theta_eq" unit="rad"/>
+    <AngleType name="HarmonicAnglePotential" type1="opls_157" type2="opls_135" type3="opls_140">
+      <Parameters>
+        <Parameter name="k" value="313.8"/>
+        <Parameter name="theta_eq" value="1.93207948196"/>
+      </Parameters>
+    </AngleType>
+    <AngleType name="HarmonicAnglePotential" type1="opls_140" type2="opls_135" type3="opls_140">
+      <Parameters>
+        <Parameter name="k" value="276.144"/>
+        <Parameter name="theta_eq" value="1.88146493365"/>
+      </Parameters>
+    </AngleType>
+    <AngleType name="HarmonicAnglePotential" type1="opls_135" type2="opls_157" type3="opls_154">
+      <Parameters>
+        <Parameter name="k" value="418.4"/>
+        <Parameter name="theta_eq" value="1.91113553093"/>
+      </Parameters>
+    </AngleType>
+    <AngleType name="HarmonicAnglePotential" type1="opls_135" type2="opls_157" type3="opls_140">
+      <Parameters>
+        <Parameter name="k" value="313.8"/>
+        <Parameter name="theta_eq" value="1.93207948196"/>
+      </Parameters>
+    </AngleType>
+    <AngleType name="HarmonicAnglePotential" type1="opls_140" type2="opls_157" type3="opls_154">
+      <Parameters>
+        <Parameter name="k" value="292.88"/>
+        <Parameter name="theta_eq" value="1.91113553093"/>
+      </Parameters>
+    </AngleType>
+    <AngleType name="HarmonicAnglePotential" type1="opls_140" type2="opls_157" type3="opls_140">
+      <Parameters>
+        <Parameter name="k" value="276.144"/>
+        <Parameter name="theta_eq" value="1.88146493365"/>
+      </Parameters>
+    </AngleType>
+    <AngleType name="HarmonicAnglePotential" type1="opls_157" type2="opls_154" type3="opls_155">
+      <Parameters>
+        <Parameter name="k" value="460.24"/>
+        <Parameter name="theta_eq" value="1.89368223841"/>
+      </Parameters>
+    </AngleType>
+  </AngleTypes>
+  <DihedralTypes expression="c0 + c1*cos(phi) + c2*cos(phi)**2 + c3*cos(phi)**3 + c4*cos(phi)**4 + c5*cos(phi)**5">
+    <ParametersUnitDef parameter="c0" unit="kJ/mol"/>
+    <ParametersUnitDef parameter="c1" unit="kJ/mol"/>
+    <ParametersUnitDef parameter="c2" unit="kJ/mol"/>
+    <ParametersUnitDef parameter="c3" unit="kJ/mol"/>
+    <ParametersUnitDef parameter="c4" unit="kJ/mol"/>
+    <ParametersUnitDef parameter="c5" unit="kJ/mol"/>
+    <DihedralType name="RyckaertBellemansTorsionPotential" type1="opls_140" type2="opls_157" type3="opls_135" type4="opls_140">
+      <Parameters>
+        <Parameter name="c0" value="0.6276"/>
+        <Parameter name="c1" value="1.8828"/>
+        <Parameter name="c2" value="0.0"/>
+        <Parameter name="c3" value="-2.5104"/>
+        <Parameter name="c4" value="0.0"/>
+        <Parameter name="c5" value="0.0"/>
+      </Parameters>
+    </DihedralType>
+    <DihedralType name="RyckaertBellemansTorsionPotential" type1="opls_140" type2="opls_135" type3="opls_157" type4="opls_154">
+      <Parameters>
+        <Parameter name="c0" value="0.97905"/>
+        <Parameter name="c1" value="2.93716"/>
+        <Parameter name="c2" value="0.0"/>
+        <Parameter name="c3" value="-3.91622"/>
+        <Parameter name="c4" value="0.0"/>
+        <Parameter name="c5" value="0.0"/>
+      </Parameters>
+    </DihedralType>
+    <DihedralType name="RyckaertBellemansTorsionPotential" type1="opls_135" type2="opls_157" type3="opls_154" type4="opls_155">
+      <Parameters>
+        <Parameter name="c0" value="-0.4435"/>
+        <Parameter name="c1" value="3.83255"/>
+        <Parameter name="c2" value="0.72801"/>
+        <Parameter name="c3" value="-4.11705"/>
+        <Parameter name="c4" value="0.0"/>
+        <Parameter name="c5" value="0.0"/>
+      </Parameters>
+    </DihedralType>
+    <DihedralType name="RyckaertBellemansTorsionPotential" type1="opls_140" type2="opls_157" type3="opls_154" type4="opls_155">
+      <Parameters>
+        <Parameter name="c0" value="0.9414"/>
+        <Parameter name="c1" value="2.8242"/>
+        <Parameter name="c2" value="0.0"/>
+        <Parameter name="c3" value="-3.7656"/>
+        <Parameter name="c4" value="0.0"/>
+        <Parameter name="c5" value="0.0"/>
+      </Parameters>
+    </DihedralType>
+  </DihedralTypes>
+</ForceField>

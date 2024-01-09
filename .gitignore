@@ -64,3 +64,6 @@ mbuild/version.py
 
 # protobuf generated py file
 compound_pb2.py
+
+# saved files
+Tutorials for GMSO/saved_files/
